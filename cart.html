@@ -18,8 +18,30 @@ header{background:var(--green);color:white;padding:14px 18px;display:flex;justif
 header input{padding:8px 14px;border-radius:20px;border:none;width:40%}
 
 /* NAVBAR */
-nav{display:flex;gap:20px;padding:10px;background:#e8f5e9;justify-content:center;font-weight:500}
-nav a{text-decoration:none;color:#2e7d32}
+
+nav{
+background:#e8f5e9;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:10px;
+font-weight:600;
+}
+
+nav a{
+text-decoration:none;
+color:#2e7d32;
+padding:6px 12px;
+border-radius:6px;
+transition:all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+nav a:hover{
+background:#2e7d32;
+color:white;
+transform:translateY(-2px);
+}
 
 /* CART */
 .container{max-width:900px;margin:auto;padding:20px}
@@ -112,3 +134,4 @@ Delivery: ₹40<br>
 
 </body>
 </html>
+
