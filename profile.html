@@ -20,24 +20,33 @@ body{background:var(--light)}
 
 /* HEADER */
 /* ===== MODERN HEADER ===== */
-.header{
-background:#2e7d32;
+header{
+background:var(--green);
 color:white;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:12px 20px;
+padding:12px 18px;
 flex-wrap:wrap;
+gap:10px;
 }
 
 /* LOGO */
-.logo a{
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:bold;
 text-decoration:none;
 color:white;
-font-size:22px;
-font-weight:700;
-letter-spacing:0.5px;
 }
+
+.logo img{
+height:42px;
+border-radius:6px;
+}
+
 
 /* SEARCH */
 .search-box{
@@ -184,9 +193,10 @@ cursor:pointer;
 
 <header class="header">
 
-<div class="logo">
-<a href="index.html">🌾 FertilizerSeedMart</a>
-</div>
+<a href="index.html" class="logo">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7R-Hvkk2DNO8FEXML4n1gtinFU95JTBSEw&s" alt="logo">
+FertilizerSeedMart
+</a>
 
 <div class="search-box">
 <input type="text" placeholder="Search seeds, fertilizer...">
