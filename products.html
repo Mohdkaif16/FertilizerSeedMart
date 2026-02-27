@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FertilizerSeedMart - Products</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--green:#2e7d32;
+--accent:#ffb300;
+--light:#f4f8f4;
+}
+
+*{
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+margin:0;
+padding:0;
+}
+
+body{
+background:var(--light);
+}
+
+/* HEADER */
+header{
+background:var(--green);
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 18px;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+}
+
+.logo img{
+height:42px;
+border-radius:6px;
+}
+
+.search{
+padding:9px 14px;
+border-radius:20px;
+border:none;
+width:260px;
+max-width:90%;
+}
+
+.cart-btn{
+background:#1b5e20;
+color:#fff;
+padding:10px 18px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* NAV */
+nav{
+background:#e8f5e9;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:10px;
+font-weight:600;
+}
+
+nav a{
+text-decoration:none;
+color:#2e7d32;
+padding:6px 12px;
+border-radius:6px;
+transition:.25s;
+}
+
+nav a:hover{
+background:#2e7d32;
+color:white;
+transform:translateY(-2px);
+}
+
+/* SECTION */
+.section{
+width:95%;
+margin:25px auto;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:15px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+transition:.25s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 24px rgba(0,0,0,.15);
+}
+
+.card-image{
+height:200px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f3f7f3;
+border-radius:12px;
+overflow:hidden;
+padding:10px;
+}
+
+.card-image img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+transition:.35s;
+}
+
+.card:hover .card-image img{
+transform:scale(1.08);
+}
+
+.card h3{
+margin:12px 0 5px;
+font-size:16px;
+}
+
+.card p{
+font-weight:600;
+color:var(--green);
+margin:5px 0 10px;
+}
+
+.card button{
+background:var(--accent);
+border:none;
+padding:10px 16px;
+border-radius:22px;
+cursor:pointer;
+font-weight:600;
+transition:.25s;
+}
+
+.card button:hover{
+background:#ffa000;
+transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7R-Hvkk2DNO8FEXML4n1gtinFU95JTBSEw&s">
+FertilizerSeedMart
+</a>
+
+<input type="search" class="search" placeholder="Search seeds, fertilizer...">
+
+<div class="cart-btn" onclick="goToCart()">
+🛒 <span id="cartCount">0</span>
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="profile.html">Profile</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="section">
+<h2>All Products</h2>
+
+<div class="grid">
+
+<!-- SEEDS -->
+<div class="card">
+<div class="card-image">
+<img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b">
+</div>
+<h3>Wheat Seeds</h3>
+<p>₹120</p>
+<button onclick="addToCart('Wheat Seeds',120)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1wa3MGpEmc0LU6Iyn044TgunAUpyiMZePGIXUCn_fnFR4K5k3">
+</div>
+<h3>Rice Seeds</h3>
+<p>₹150</p>
+<button onclick="addToCart('Rice Seeds',150)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://m.media-amazon.com/images/I/71iUXwl3vAL._AC_UF1000,1000_QL80_.jpg">
+</div>
+<h3>Hybrid Corn Seeds</h3>
+<p>₹350</p>
+<button onclick="addToCart('Hybrid Corn Seeds',350)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1U5eelSYc9uRNMpPj5KvQR-pC8-_vNgH-IQ&s">
+</div>
+<h3>Tomato Seeds</h3>
+<p>₹120</p>
+<button onclick="addToCart('Tomato Seeds',120)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuElbmvcrPb-Q2eufvG2qfMaRvnBTz0xpLhw&s">
+</div>
+<h3>Sunflower Seeds</h3>
+<p>₹190</p>
+<button onclick="addToCart('Sunflower Seeds',190)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://www.viralspices.com/wp-content/uploads/2024/08/Mustard-seed-624x312.jpg">
+</div>
+<h3>Mustard Seeds</h3>
+<p>₹160</p>
+<button onclick="addToCart('Mustard Seeds',160)">Add to Cart</button>
+</div>
+
+<!-- FERTILIZERS -->
+<div class="card">
+<div class="card-image">
+<img src="https://m.media-amazon.com/images/I/61INdBPuvpL._AC_UF1000,1000_QL80_.jpg">
+</div>
+<h3>Urea Fertilizer</h3>
+<p>₹300</p>
+<button onclick="addToCart('Urea Fertilizer',300,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://m.media-amazon.com/images/I/51oBCUyTOjL._AC_UF1000,1000_QL80_.jpg">
+</div>
+<h3>DAP Fertilizer</h3>
+<p>₹1350</p>
+<button onclick="addToCart('DAP Fertilizer',1350,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://tse1.mm.bing.net/th/id/OIP.UtiVU-axC0GIUWRb85W3lQHaHa?pid=Api&P=0&h=180">
+</div>
+<h3>NPK 20-20-20</h3>
+<p>₹980</p>
+<button onclick="addToCart('NPK 20-20-20',980,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://m.media-amazon.com/images/I/61onlYzbUUL._SL1002_.jpg">
+</div>
+<h3>MOP Potash</h3>
+<p>₹1100</p>
+<button onclick="addToCart('MOP Potash',1100,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://cdn.commercev3.net/cdn.arbico-organics.com/images/uploads/1305500_tanks_organic_compost_600x600.jpg">
+</div>
+<h3>Organic Compost</h3>
+<p>₹450</p>
+<button onclick="addToCart('Organic Compost',450,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://m.media-amazon.com/images/I/612JPcKSEPL.jpg">
+</div>
+<h3>Vermicompost</h3>
+<p>₹500</p>
+<button onclick="addToCart('Vermicompost',500,this)">Add to Cart</button>
+</div>
+
+<!-- PESTICIDES -->
+<div class="card">
+<div class="card-image">
+<img src="https://img01.71360.com/file/read/www2/M00/75/7C/rBwBEmSL_MeATIgaAAIWyYweZrg170.jpg">
+</div>
+<h3>Glyphosate Herbicide</h3>
+<p>₹720</p>
+<button onclick="addToCart('Glyphosate Herbicide',720)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://cpimg.tistatic.com/08497758/b/4/Agri-M-45-Mancozeb-75-WP-Contact-Fungicide.jpg">
+</div>
+<h3>Mancozeb Fungicide</h3>
+<p>₹480</p>
+<button onclick="addToCart('Mancozeb Fungicide',480)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+<div class="card-image">
+<img src="https://files.plytix.com/api/v1.1/file/public_files/pim/assets/43/37/8d/5e/5e8d3743202d9eba64d3af60/images/3d/af/7e/66/667eaf3dfbf86159c853a6de/2009_Front.jpg">
+</div>
+<h3>Neem Oil Spray</h3>
+<p>₹350</p>
+<button onclick="addToCart('Neem Oil Spray',350,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://dujjhct8zer0r.cloudfront.net/media/prod_image/9177795341754294797.webp">
+</div>
+<h3>Imidacloprid 17.8% SL</h3>
+<p>₹820</p>
+<button onclick="addToCart('Imidacloprid 17.8% SL',820,this)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB5agNwWkRUmxJC4IE7bwvNDc_-PXZom-S7A&s">
+</div>
+<h3>Organic Bio Pesticide</h3>
+<p>₹540</p>
+<button onclick="addToCart('Organic Bio Pesticide',540,this)">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>

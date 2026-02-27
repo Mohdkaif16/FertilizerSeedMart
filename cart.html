@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FertilizerSeedMart - Cart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--green:#2e7d32;
+--dark:#1b5e20;
+--accent:#ffb300;
+--light:#f4f8f4;
+}
+
+*{
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:var(--light);
+margin:0;
+}
+
+/* HEADER */
+header{
+background:var(--green);
+color:white;
+padding:14px 22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+margin:0;
+font-weight:500;
+}
+
+header input{
+padding:8px 14px;
+border-radius:20px;
+border:none;
+width:40%;
+}
+
+/* NAV */
+nav{
+background:#e8f5e9;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:10px;
+font-weight:600;
+}
+
+nav a{
+text-decoration:none;
+color:var(--green);
+padding:6px 12px;
+border-radius:6px;
+transition:.25s;
+}
+
+nav a:hover{
+background:var(--green);
+color:white;
+transform:translateY(-2px);
+}
+
+/* CONTAINER */
+.container{
+max-width:950px;
+margin:auto;
+padding:25px 20px 60px;
+}
+
+/* ITEM CARD */
+.item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:14px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+transition:.25s;
+}
+
+.item:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.left{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.left img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:12px;
+}
+
+/* QTY SECTION */
+.qty{
+text-align:center;
+}
+
+.qty button{
+padding:6px 12px;
+border:none;
+background:#e0e0e0;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+transition:.2s;
+}
+
+.qty button:hover{
+background:#d5d5d5;
+}
+
+.remove{
+background:#ef5350;
+color:white;
+border:none;
+border-radius:18px;
+padding:6px 14px;
+margin-top:6px;
+cursor:pointer;
+}
+
+.remove:hover{
+background:#d32f2f;
+}
+
+/* TOTAL BOX */
+.total{
+margin-top:20px;
+background:white;
+padding:18px;
+border-radius:14px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+font-size:15px;
+line-height:1.8;
+}
+
+.total b{
+color:var(--green);
+font-size:18px;
+}
+
+/* ADDRESS */
+.address{
+background:white;
+padding:18px;
+border-radius:14px;
+margin-top:18px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.address input{
+width:100%;
+padding:12px;
+margin-top:8px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+/* BUTTONS */
+.checkout{
+width:100%;
+padding:14px;
+background:var(--accent);
+border:none;
+border-radius:28px;
+font-size:16px;
+margin-top:20px;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+}
+
+.checkout:hover{
+background:#ffa000;
+letter-spacing:.5px;
+}
+
+.clear{
+margin-top:10px;
+background:#424242;
+color:white;
+border:none;
+padding:12px;
+border-radius:20px;
+width:100%;
+cursor:pointer;
+}
+
+.clear:hover{
+background:#212121;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>🛒 Your Cart</h2>
+<input placeholder="Search item...">
+<div>2 items</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="profile.html">Profile</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- SAMPLE ITEMS -->
+
+<div class="item">
+<div class="left">
+<img src="https://m.media-amazon.com/images/I/71iUXwl3vAL._AC_UF1000,1000_QL80_.jpg">
+<div>
+<b>Hybrid Corn Seeds</b><br>
+₹350 × 1 = <b>₹350</b>
+</div>
+</div>
+
+<div class="qty">
+<button>−</button>
+<b>1</b>
+<button>+</button><br>
+<button class="remove">Remove</button>
+</div>
+</div>
+
+<div class="item">
+<div class="left">
+<img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b">
+<div>
+<b>Wheat Seeds</b><br>
+₹280 × 2 = <b>₹560</b>
+</div>
+</div>
+
+<div class="qty">
+<button>−</button>
+<b>2</b>
+<button>+</button><br>
+<button class="remove">Remove</button>
+</div>
+</div>
+
+<div class="total">
+Subtotal: ₹910<br>
+Delivery: ₹40<br>
+<b>Grand Total: ₹950</b>
+</div>
+
+<div class="address">
+<b>Delivery Address</b>
+<input placeholder="Enter delivery address">
+</div>
+
+<button class="checkout">Place Order</button> <button class="clear">Clear Cart</button>
+
+</div>
+
+</body>
+</html>

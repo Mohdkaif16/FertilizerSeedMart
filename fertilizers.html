@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FertilizerSeedMart - fertilizers</title>
+
+<style>
+:root{
+--green:#2e7d32;
+--light:#f4f8f4;
+--accent:#ffb300;
+}
+
+body{margin:0;font-family:Arial;background:var(--light)}
+
+/* HEADER */
+header{
+background:var(--green);
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 18px;
+flex-wrap:wrap;
+gap:10px;
+}
+
+/* BRAND LOGO */
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+}
+
+.brand img{
+height:42px;
+border-radius:6px;
+background:white;
+padding:2px;
+}
+.search-box input{
+padding:9px 14px;
+border-radius:25px;
+border:none;
+width:280px;
+max-width:80vw;
+}
+
+.cart-btn{background:#1b5e20;color:#fff;padding:10px 18px;border-radius:30px;font-weight:600}
+.cart{position:fixed;right:-350px;top:0;width:320px;height:100%;background:#fff;box-shadow:-3px 0 15px rgba(0,0,0,.25);padding:20px}
+
+
+/* NAV */
+nav{
+background:#e8f5e9;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:10px;
+font-weight:600;
+}
+
+nav a{
+text-decoration:none;
+color:var(--green);
+padding:6px 12px;
+border-radius:6px;
+transition:.25s;
+}
+
+nav a:hover{
+background:var(--green);
+color:white;
+transform:translateY(-2px);
+}
+
+/* BREADCRUMB */
+.breadcrumb{
+width:90%;
+margin:15px auto;
+color:#666;
+font-size:14px;
+}
+
+/* SECTION */
+.section{
+width:90%;
+margin:10px auto 30px;
+}
+
+.section h2{
+margin-bottom:15px;
+border-left:5px solid var(--green);
+padding-left:10px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+}
+
+/* CARD */
+/* product card */
+.product-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+display:flex;
+flex-direction:column;
+transition:.28s;
+position:relative;
+}
+
+.product-card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 16px 30px rgba(0,0,0,0.18);
+}
+
+/* image */
+.product-img{
+height:200px;
+overflow:hidden;
+background:#f1f8f1;
+}
+
+.product-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.product-card:hover img{
+transform:scale(1.1);
+}
+
+/* info */
+.product-info{
+padding:14px;
+text-align:center;
+background:#fafafa;
+}
+
+.product-info b{
+display:block;
+font-size:16px;
+margin-bottom:4px;
+}
+
+.price{
+color:#2e7d32;
+font-weight:bold;
+font-size:18px;
+margin:6px 0;
+}
+
+.add-btn{
+background:#ffb300;
+border:none;
+padding:8px 16px;
+border-radius:22px;
+cursor:pointer;
+font-weight:600;
+transition:.25s;
+}
+
+.add-btn:hover{
+background:#ffa000;
+letter-spacing:.3px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+<a href="index.html" class="brand">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7R-Hvkk2DNO8FEXML4n1gtinFU95JTBSEw&s">
+<span>FertilizerSeedMart</span>
+</a>
+<div class="search-box"><input type="search" placeholder="Search Fertilizers..."></div>
+<div class="cart-btn">🛒 <span>0</span></div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="seed.html">Seeds</a>
+<a href="fertilizers.html">Fertilizers</a>
+<a href="pesticides.html">Pesticides</a>
+<a href="tools.html">Tools</a>
+</nav>
+
+
+
+<div class="section">
+<h2>Fertilizers</h2>
+
+
+<div class="grid">
+
+<!-- Urea -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://m.media-amazon.com/images/I/61INdBPuvpL._AC_UF1000,1000_QL80_.jpg">
+</div>
+<div class="product-info">
+<b>Urea Fertilizer</b>
+<div class="price">₹270 / 45kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<!-- DAP -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://m.media-amazon.com/images/I/51oBCUyTOjL._AC_UF1000,1000_QL80_.jpg">
+</div>
+<div class="product-info">
+<b>DAP Fertilizer</b>
+<div class="price">₹1350 / 50kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<!-- NPK -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://tse1.mm.bing.net/th/id/OIP.UtiVU-axC0GIUWRb85W3lQHaHa?pid=Api&P=0&h=180">
+</div>
+<div class="product-info">
+<b>NPK 20-20-20</b>
+<div class="price">₹980 / 25kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<!-- Potash -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://m.media-amazon.com/images/I/61onlYzbUUL._SL1002_.jpg">
+</div>
+<div class="product-info">
+<b>MOP Potash</b>
+<div class="price">₹1100 / 50kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<!-- Organic Compost -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://cdn.commercev3.net/cdn.arbico-organics.com/images/uploads/1305500_tanks_organic_compost_600x600.jpg">
+</div>
+<div class="product-info">
+<b>Organic Compost</b>
+<div class="price">₹450 / 20kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<!-- Vermicompost -->
+<div class="product-card">
+<div class="product-img">
+<img src="https://m.media-amazon.com/images/I/612JPcKSEPL.jpg">
+</div>
+<div class="product-info">
+<b>Vermicompost</b>
+<div class="price">₹500 / 25kg bag</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
